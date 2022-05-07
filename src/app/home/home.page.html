@@ -1,0 +1,47 @@
+<body>
+  <!-- Nav Section-->
+  <div class="topnav">
+    <a class="active" href="http://localhost:8100/home">Home</a>
+    <a href="http://localhost:8100/main">Map</a>
+    <a href="http://localhost:8100/guess">Am i a robot ?</a>
+    <a href="http://localhost:8100/saved-info">Whats my mood?</a>
+  </div>
+  <h2>Welcome to {{value}}</h2>
+
+  <button
+    onclick="document.getElementById('id01').style.display='block'"
+    style="width: auto"
+  >
+    Login
+  </button>
+  <style></style>
+  <div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span
+          onclick="document.getElementById('id01').style.display='none'"
+          class="close"
+          title="Exit"
+          >&times;</span
+        >
+      </div>
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input
+          #box
+          (keyup.enter)="onEnter(box.value)"
+          id="tag"
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          required
+        />
+        <details>
+          <summary>Hint</summary>
+          Enter your name e.g John <br />
+        </details>
+      </div>
+    </form>
+  </div>
+  <h2>Current Mood :{{myStatus}}</h2>
+</body>

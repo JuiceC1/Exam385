@@ -1,0 +1,24 @@
+<body>
+  <div class="topnav">
+    <a class="active" href="http://localhost:8100/home">Home</a>
+    <a href="http://localhost:8100/main">Map</a>
+    <a href="http://localhost:8100/guess">Am i a robot ?</a>
+    <a href="http://localhost:8100/saved-info">Whats my mood?</a>
+  </div>
+  <h1>
+    In order to verify you are a human being what is the color of the object
+    below?
+  </h1>
+  <img src="../../assets/banan.jpg" alt="" />
+  <br />
+  <input
+    #box
+    (keyup.enter)="onEnter(box.value)"
+    type="text"
+    name=""
+    id="userInput"
+  />
+  <!-- Shows the answer if the user was right or wrong-->
+  <h2 [hidden]="hidden">{{option}}</h2>
+  <br />
+</body>

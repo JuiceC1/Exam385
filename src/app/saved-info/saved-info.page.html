@@ -1,0 +1,31 @@
+<body>
+  <div class="topnav">
+    <a class="active" href="http://localhost:8100/home">Home</a>
+    <a href="http://localhost:8100/main">Map</a>
+    <a href="http://localhost:8100/guess">Am i a robot ?</a>
+    <a href="http://localhost:8100/saved-info">Whats my mood?</a>
+  </div>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="myStatus">
+      <ion-list-header>
+        <ion-label>Here you can select the your current mood</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Sad</ion-label>
+        <ion-radio slot="start" value="Sad"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Angry</ion-label>
+        <ion-radio slot="start" value="Angry"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Happy</ion-label>
+        <ion-radio slot="start" value="Happy"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-button (click)="SaveStatus()">Save</ion-button>
+  </ion-list>
+</body>

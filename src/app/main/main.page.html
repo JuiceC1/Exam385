@@ -1,0 +1,21 @@
+<body>
+  <div class="topnav">
+    <a class="active" href="http://localhost:8100/home">Home</a>
+    <a href="http://localhost:8100/main">Map</a>
+    <a href="http://localhost:8100/guess">Am i a robot ?</a>
+    <a href="http://localhost:8100/saved-info">Whats my mood?</a>
+  </div>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title> This is your current location on GoogleMaps </ion-title>
+    </ion-toolbar>
+    <div class="container">
+      <ion-button (click)="WherAmI()">Where I am?</ion-button>
+      <p>Lat: {{lat}}, Lng: {{lng}}</p>
+    </div>
+  </ion-header>
+
+  <ion-content>
+    <div id="map" style="height: 100%"></div>
+  </ion-content>
+</body>
